@@ -1,0 +1,9 @@
+Introdução
+Será criado um aplicativo pada salvamento de dados dos escoteiros.
+Os usuarios podem ser escoteiros, instrutores ou administradores.
+Os escoteiros poderão cadastrar doenças cronicas serão atreladas a sua conta, poderão consultar as doças ja cadastradas e poderão se inscrever em atividades;
+Os instrutores poderão criar atividades e designiar equipamentos para estas atividades bem como consultar escoteiros e suas respectivas doenças crônicas;
+Os administradores poderão criar eventos e designar atividades para este eventos bem como comprar ou derscartar equipamentos mas devem ser salvos os dados de quem realizou estas ações.
+Todo deve se saber de que compra veio determinado equipamento bem como o seu tipo.
+Das atividades deve se saber onde e quando ocorrera e quem são os instrutores que a ministrarão bem como os alunos inscritos e poderá cancelar uma inscrição devido a determinada doença cronica de um estudante por exemplo um instrutor pode cancelar a inscrição de um aluno com alergia a abelhas a um local de produção de mel, os dados desse cancelamento devem ser salvos.
+
