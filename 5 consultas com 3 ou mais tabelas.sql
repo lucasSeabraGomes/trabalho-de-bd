@@ -11,3 +11,6 @@ select doencacronica.descricao from doencacronica,escoteiro_has_doencacronica,pe
 -- cunsulta de todos os equipamentos comprados por determinado administrador
 -- π equipamento.id(σ compra.id=equipamento.compra_id && pessoa.cpf=compra.administrador_pessoa_cpf && pessoa.nome='x'(compra X pessoa X equipamento))
 select equipamento.idequipamento from compra,equipamento,pessoa where pessoa.cpf=compra.administrador_pessoa_cpf && compra.idcompra=equipamento.compra_idcompra && pessoa.nome='x';
+-- consulta as doenças cronicas de um aluno que participa de determinada atividade
+-- π doencacronica.nome (σ escoteiro_has_doençacronica.escoteiro_cpf=escoteiro_participa_atividade.escoteiro_cpf && escoteiro_has_doencacronica.doencacronica_id=doencacronica.id(escoteiro_participa_atividade X escoteiro_has_doencacronica X doencacronica))
+select doencacronica.nome from escoteiro_has_doencacronica,escoteiro_participa_atividade,doencacronica where doencacronica.id=escoteiro_has_doencacronica.doencaCronica_id && escoteiro_participa_atividade.escoteiro_pessoa_cpf=escoteiro_has_doencacronica.escoteiro_pessoa_cpf;
