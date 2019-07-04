@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`instrutor` (
   `data_contrata` DATE NOT NULL,
   `pessoa_cpf` VARCHAR(45) NOT NULL,
   `data_demite` DATE NULL,
-  `salario` INT NOT NULL,
+  `salario` FLOAT NOT NULL,
   PRIMARY KEY (`pessoa_cpf`),
   INDEX `fk_table2_pessoa_idx` (`pessoa_cpf` ASC) ,
   CONSTRAINT `fk_table2_pessoa`
@@ -100,6 +100,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`administrador` (
   `pessoa_cpf` VARCHAR(45) NOT NULL,
   `data_inic` DATE NOT NULL,
   `data_saida` DATE NULL,
+  `salario` FLOAT NOT NULL,
   INDEX `fk_administrador_pessoa1_idx` (`pessoa_cpf` ASC) ,
   PRIMARY KEY (`pessoa_cpf`),
   CONSTRAINT `fk_administrador_pessoa1`
