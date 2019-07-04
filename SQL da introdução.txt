@@ -1,0 +1,22 @@
+inserção de Doença Crônica
+insert into doencaCronica
+values (ID (int), 'NOME (varchar(45))', 'DESCRIÇÃO DA DOENÇA');
+EX:
+insert into doencaCronica
+values (1, 'paralisia', 'paralisia branda no braço esquerdo');
+
+
+atrelar Doença Crônica à Escoteiro
+insert into escoteiro_has_doencaCronica
+values('cpf_escoteiro (varchar(45))', ID_DOENÇA (int));
+EX:
+insert into escoteiro_has_doencaCronica
+values('0002', 1); 
+
+mostrar Escoteiros e suas Doenças Crônicas
+select * 
+from pessoa, escoteiro, escoteiro_has_doencaCronica, doencaCronica
+where cpf = pessoa_cpf and pessoa_cpf = escoteiro_pessoa_cpf and doencaCronica_id = id
+
+* OBS para encontrar uma pessoa específica e saber se ela tem alguma doença é só modificar a consulta de cima...
+Inscrever escoteiro em atividade
