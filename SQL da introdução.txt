@@ -1,22 +1,24 @@
-inserção de Doença Crônica
+inserÃ§Ã£o de DoenÃ§a CrÃ´nica
 insert into doencaCronica
-values (ID (int), 'NOME (varchar(45))', 'DESCRIÇÃO DA DOENÇA');
+values (ID (int), 'NOME (varchar(45))', 'DESCRIÃ‡ÃƒO DA DOENÃ‡A');
 EX:
 insert into doencaCronica
-values (1, 'paralisia', 'paralisia branda no braço esquerdo');
+values (1, 'paralisia', 'paralisia branda no braÃ§o esquerdo');
 
 
-atrelar Doença Crônica à Escoteiro
+atrelar DoenÃ§a CrÃ´nica Ã  Escoteiro
 insert into escoteiro_has_doencaCronica
-values('cpf_escoteiro (varchar(45))', ID_DOENÇA (int));
+values('cpf_escoteiro (varchar(45))', ID_DOENÃ‡A (int));
 EX:
 insert into escoteiro_has_doencaCronica
 values('0002', 1); 
 
-mostrar Escoteiros e suas Doenças Crônicas
+mostrar Escoteiros e suas DoenÃ§as CrÃ´nicas
 select * 
 from pessoa, escoteiro, escoteiro_has_doencaCronica, doencaCronica
 where cpf = pessoa_cpf and pessoa_cpf = escoteiro_pessoa_cpf and doencaCronica_id = id
 
-* OBS para encontrar uma pessoa específica e saber se ela tem alguma doença é só modificar a consulta de cima...
+* OBS para encontrar uma pessoa especÃ­fica e saber se ela tem alguma doenÃ§a Ã© sÃ³ modificar a consulta de cima...
 Inscrever escoteiro em atividade
+criar atividades
+insert into atividade values(1,1(um inteiro q Ã© o codigo do tipo de atividade ideia printar os tipos de atividades para escolha do instrutor),(isso Ã© o evento e o administrador q coloca entao comeÃ§a sempre como null)null,(data inicio formato dd/mm/yyyy)31/10/1933,(data fim formato dd/mm/yyyy)12/11/1999,1(um inteiro q Ã© o codigo do local ideia printar os locais para escolha do instrutor));
