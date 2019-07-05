@@ -1,0 +1,88 @@
+inserção de Doença Crônica
+
+insert into doencaCronica
+values (ID (int), 'NOME (varchar(45))', 'DESCRIÇÃO DA DOENÇA');
+
+EX:
+
+insert into doencaCronica
+values (1, 'paralisia', 'paralisia branda no braço esquerdo');
+
+
+atrelar Doença Crônica à Escoteiro
+
+insert into escoteiro_has_doencaCronica
+values('cpf_escoteiro (varchar(45))', ID_DOENÇA (int));
+
+EX:
+
+insert into escoteiro_has_doencaCronica
+values('0002', 1); 
+
+mostrar Escoteiros e suas Doenças Crônicas
+
+select * 
+from pessoa, escoteiro, escoteiro_has_doencaCronica, doencaCronica
+where cpf = pessoa_cpf and pessoa_cpf = escoteiro_pessoa_cpf and doencaCronica_id = id
+
+* OBS para encontrar uma pessoa específica e saber se ela tem alguma doença é só modificar a consulta de cima...
+Inscrever escoteiro em atividade
+
+inserir um tipo de atividade
+
+insert into tipoAtividade
+
+values (idtipoAtividade (int), nome (varchar(45)), 'descrição da atividade (varchar(200)));
+
+EX:
+
+insert into tipoAtividade
+
+values (23, 'lazer', 'Caminhar até as montanhas');
+
+inserir local
+
+insert into local
+
+values(idlocal (int), nome (varchar(45)), localização (varchar(45)));
+
+EX:
+
+insert into local
+
+values(45, 'montanha azul', 'Minas Gerais');
+
+inserir um evento
+
+insert into Evento
+
+values (idEvento (int), nome (varchar(45)), descricao (varchar(200)), administrador_pessoa_cpf (varchar(45)), inicio (data), fim (data));
+
+EX:
+
+insert into Evento
+
+values (34, 'Colônia de Férias', 'Vai ser só diversão', '0020', '2019-07-12', '2019-08-12');
+
+cadastrar um escoteiro em uma atividade
+
+insert into escoteiro_participa_atividade
+values('escoteiro_pessoa_cpf (varchar(45))', atividade_idatividade (int));
+
+EX:
+
+insert into escoteiro_participa_atividade
+values('0001', 78);
+
+mostrar as atividades que os escoteiros estão cadastrados
+
+select *
+
+from pessoa, escoteiro, escoteiro_participa_atividade, atividade
+
+where cpf = pessoa_cpf and pessoa_cpf = escoteiro_pessoa_cpf and atividade_idatividade = idatividade;
+
+* OBS para encontrar uma pessoa específica e saber em qual atividade ela está cadastrada é só modificar a consulta de cima...
+
+
+

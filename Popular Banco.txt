@@ -1,0 +1,199 @@
+--  inserindo endereços
+
+insert into endereco
+values ('Samambaia Sul QR 306 CONJ 07 CASA 03', '00000');
+insert into endereco
+values ('Taguatinga Sul QR 387 CONJ 09 CASA 93', '00001');
+insert into endereco
+values ('Ceilândia Sul QR 906 CONJ 17 CASA 098', '00002');
+insert into endereco
+values ('Riacho Fundo QR 319 CONJ 897 CASA 9833', '00003');
+insert into endereco
+values ('Ceilândia Norte QR 906 CONJ 890 CASA 80', '00004');
+insert into endereco
+values ('Taguatinga Sul QR 888 CONJ 117 CASA 91', '00005');
+insert into endereco
+values ('Samambaia Sul QR 987 CONJ 090 CASA 113', '00006');
+insert into endereco
+values ('Itapoã QR 906 CONJ 997 CASA 34', '00007');
+insert into endereco
+values ('Sol Nascente QR 073 CONJ 12 CASA 0173', '00008');
+insert into endereco
+values ('Brásilia QNF 21 LOTE 27 CASA 48', '00009');
+insert into endereco
+values ('Samambaia Sul QR 306 CONJ 01 CASA 03', '00010');
+insert into endereco
+values ('Taguatinga Sul QR 387 CONJ 02 CASA 93', '00011');
+insert into endereco
+values ('Ceilândia Sul QR 906 CONJ 04 CASA 098', '00012');
+insert into endereco
+values ('Riacho Fundo QR 319 CONJ 05 CASA 9833', '00013');
+insert into endereco
+values ('Ceilândia Norte QR 906 CONJ 06 CASA 80', '00014');
+insert into endereco
+values ('Taguatinga Sul QR 888 CONJ 17 CASA 91', '00015');
+insert into endereco
+values ('Samambaia Sul QR 987 CONJ 08 CASA 113', '00016');
+insert into endereco
+values ('Itapoã QR 906 CONJ 997 CASA 09', '00017');
+insert into endereco
+values ('Sol Nascente QR 073 CONJ 35 CASA 0173', '00018');
+insert into endereco
+values ('Brásilia QNF 21 LOTE 16 CASA 48', '00019');
+insert into endereco
+values ('Samambaia Sul QR 306 CONJ 60 CASA 03', '00020');
+insert into endereco
+values ('Taguatinga Sul QR 387 CONJ 61 CASA 93', '00021');
+insert into endereco
+values ('Ceilândia Sul QR 906 CONJ 62 CASA 098', '00022');
+insert into endereco
+values ('Riacho Fundo QR 319 CONJ 63 CASA 9833', '00023');
+insert into endereco
+values ('Ceilândia Norte QR 906 CONJ 64 CASA 80', '00024');
+insert into endereco
+values ('Taguatinga Sul QR 888 CONJ 65 CASA 91', '00025');
+insert into endereco
+values ('Samambaia Sul QR 987 CONJ 66 CASA 113', '00026');
+insert into endereco
+values ('Itapoã QR 906 CONJ 67 CASA 34', '00027');
+insert into endereco
+values ('Sol Nascente QR 073 CONJ 68 CASA 0173', '00028');
+insert into endereco
+values ('Brásilia QNF 21 LOTE 27 CASA 69', '00029');
+
+--  inserindo pessoas
+
+insert into pessoa
+values ('0000','Denis Silva', '1980-11-09', 'dsga.dsga@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Samambaia Sul QR 306 CONJ 07 CASA 03');
+insert into pessoa
+values ('0001','Rodrigo Neris', '1991-08-01', 'meu@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Taguatinga Sul QR 387 CONJ 09 CASA 93');
+insert into pessoa
+values ('0002','Flávia Alessandra', '1979-05-01', 'flavia@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Sul QR 906 CONJ 17 CASA 098');
+insert into pessoa
+values ('0003','Felipe Amaro', '1997-12-25', 'Felipe@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0004','Ricardo Silva', '1986-06-29', 'Ricardo@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Norte QR 906 CONJ 890 CASA 80');
+insert into pessoa
+values ('0005','Donatello Moreira', '1991-06-20', 'Donatello@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0006','Xavier Nogueira', '2000-08-30', 'Xavier@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0007','Cláudio Roberto', '1887-01-20', 'Claudio@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0008','Lúcio Amaro', '1876-06-19', 'Lucio@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0009','Gabriel Mello', '1836-08-19', 'Gabriel@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0010','Amadeu Silva', '1980-11-09', 'Amadeu@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Samambaia Sul QR 306 CONJ 01 CASA 03');
+insert into pessoa
+values ('0011','Felipe Neris', '1991-08-01', 'felipe@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Taguatinga Sul QR 387 CONJ 02 CASA 93');
+insert into pessoa
+values ('0012','Flávia Sandra', '1979-05-01', 'flavia@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Sul QR 906 CONJ 17 CASA 098');
+insert into pessoa
+values ('0013','Felipe Amaro', '1997-12-25', 'Felipe@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0014','Ricardo Silva', '1986-06-29', 'Ricardo@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Norte QR 906 CONJ 890 CASA 80');
+insert into pessoa
+values ('0015','Donatello Moreira', '1991-06-20', 'Donatello@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0016','Xavier Nogueira', '2000-08-30', 'Xavier@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0017','Cláudio Roberto', '1887-01-20', 'Claudio@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0018','Lúcio Amaro', '1876-06-19', 'Lucio@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0019','Gabriel Mello', '1836-08-19', 'Gabriel@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0020','Denis Silva', '1980-11-09', 'dsga.dsga@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Samambaia Sul QR 306 CONJ 07 CASA 03');
+insert into pessoa
+values ('0021','Rodrigo Neris', '1991-08-01', 'meu@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Taguatinga Sul QR 387 CONJ 09 CASA 93');
+insert into pessoa
+values ('0022','Flávia Alessandra', '1979-05-01', 'flavia@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Sul QR 906 CONJ 17 CASA 098');
+insert into pessoa
+values ('0023','Felipe Amaro', '1997-12-25', 'Felipe@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Riacho Fundo QR 319 CONJ 897 CASA 9833');
+insert into pessoa
+values ('0024','Ricardo Silva', '1986-06-29', 'Ricardo@hotmail.com', 'C:\Users\aluno\Pictures\00000', 'Ceilândia Norte QR 906 CONJ 890 CASA 80');
+
+--  inserindo escoteiros
+
+insert into escoteiro
+values(1, '2019-06-23', 1, '0000');
+insert into escoteiro
+values(1, '2019-01-03', 2, '0001');
+insert into escoteiro
+values(1, '2017-12-03', 1, '0002');
+insert into escoteiro
+values(0, '2013-06-13', 5, '0003');
+insert into escoteiro
+values(1, '2019-07-25', 1, '0004');
+insert into escoteiro
+values(1, '2014-03-03', 4, '0005');
+insert into escoteiro
+values(0, '2017-11-23', 3, '0006');
+insert into escoteiro
+values(1, '2019-08-23', 3, '0007');
+insert into escoteiro
+values(0, '2019-03-23', 1, '0008');
+insert into escoteiro
+values(1, '2013-09-23', 5, '0009');
+
+--  inserindo instrutor
+
+insert into instrutor
+values ('2013-07-23', '0010', NULL);
+insert into instrutor
+values ('2014-07-23', '0011', '2015-08-20');
+insert into instrutor
+values ('2019-07-23', '0012', NULL);
+insert into instrutor
+values ('2019-07-23', '0013', NULL);
+insert into instrutor
+values ('2019-07-23', '0014', NULL);
+insert into instrutor
+values ('2019-07-23', '0015', NULL);
+insert into instrutor
+values ('2019-07-23', '0016', NULL);
+insert into instrutor
+values ('2010-07-23', '0017', NULL);
+insert into instrutor
+values ('2017-05-23', '0018', '2019-01-01');
+insert into instrutor
+values ('2019-03-13', '0019', NULL);
+
+--  inserindo administrador
+
+insert into administrador
+values('0020', '2015-08-24', null);
+insert into administrador
+values('0021', '2018-01-04', null);
+insert into administrador
+values('0022', '2019-06-24', null);
+insert into administrador
+values('0023', '2015-02-14', '2018-08-04');
+insert into administrador
+values('0024', '2014-09-24', null);
+
+--  inserindo telefones
+
+insert into telefone
+values ('992566745');
+insert into telefone
+values ('992598235');
+insert into telefone
+values ('992568798');
+insert into telefone
+values ('997368745');
+insert into telefone
+values ('992468745');
+insert into telefone
+values ('992958745');
+insert into telefone
+values ('995568745');
+insert into telefone
+values ('992987445');
+insert into telefone
+values ('984568745');
+insert into telefone
+values ('991568745');
+
+
