@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pessoa` (
   CONSTRAINT `fk_pessoa_endereco1`
     FOREIGN KEY (`endereco_idendereco`)
     REFERENCES `mydb`.`endereco` (`enderecoCompleto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`instrutor` (
   CONSTRAINT `fk_table2_pessoa`
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -85,8 +85,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`escoteiro` (
   CONSTRAINT `fk_escoteiro_pessoa1`
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -104,8 +104,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`administrador` (
   CONSTRAINT `fk_administrador_pessoa1`
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -136,13 +136,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`escoteiro_has_doencaCronica` (
   CONSTRAINT `fk_escoteiro_has_doencaCronica_escoteiro1`
     FOREIGN KEY (`escoteiro_pessoa_cpf`)
     REFERENCES `mydb`.`escoteiro` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_escoteiro_has_doencaCronica_doencaCronica1`
     FOREIGN KEY (`doencaCronica_id`)
     REFERENCES `mydb`.`doencaCronica` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -163,8 +163,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Evento` (
   CONSTRAINT `fk_Evento_administrador1`
     FOREIGN KEY (`administrador_pessoa_cpf`)
     REFERENCES `mydb`.`administrador` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE  CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -213,18 +213,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`atividade` (
   CONSTRAINT `fk_atividade_tipoAtividade1`
     FOREIGN KEY (`tipoAtividade_idtipoAtividade`)
     REFERENCES `mydb`.`tipoAtividade` (`idtipoAtividade`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_atividade_Evento1`
     FOREIGN KEY (`Evento_idEvento`)
     REFERENCES `mydb`.`Evento` (`idEvento`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_atividade_local1`
     FOREIGN KEY (`local_idlocal`)
     REFERENCES `mydb`.`local` (`idlocal`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -242,13 +242,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`instrutor_administra_atividade` (
   CONSTRAINT `fk_instrutor_has_atividade_instrutor1`
     FOREIGN KEY (`instrutor_pessoa_cpf`)
     REFERENCES `mydb`.`instrutor` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_instrutor_has_atividade_atividade1`
     FOREIGN KEY (`atividade_idatividade`)
     REFERENCES `mydb`.`atividade` (`idatividade`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -266,13 +266,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`escoteiro_participa_atividade` (
   CONSTRAINT `fk_escoteiro_has_atividade_escoteiro1`
     FOREIGN KEY (`escoteiro_pessoa_cpf`)
     REFERENCES `mydb`.`escoteiro` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_escoteiro_has_atividade_atividade1`
     FOREIGN KEY (`atividade_idatividade`)
     REFERENCES `mydb`.`atividade` (`idatividade`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -303,8 +303,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`compra` (
   CONSTRAINT `fk_compra_administrador1`
     FOREIGN KEY (`administrador_pessoa_cpf`)
     REFERENCES `mydb`.`administrador` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -323,13 +323,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`equipamento` (
   CONSTRAINT `fk_equipamento_tipoEq1`
     FOREIGN KEY (`tipoEq_idtipoEq`)
     REFERENCES `mydb`.`tipoEq` (`idtipoEq`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_equipamento_compra1`
     FOREIGN KEY (`compra_idcompra`)
     REFERENCES `mydb`.`compra` (`idcompra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -347,13 +347,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`atividade_has_equipamento` (
   CONSTRAINT `fk_atividade_has_equipamento_atividade1`
     FOREIGN KEY (`atividade_idatividade`)
     REFERENCES `mydb`.`atividade` (`idatividade`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_atividade_has_equipamento_equipamento1`
     FOREIGN KEY (`equipamento_idequipamento`)
     REFERENCES `mydb`.`equipamento` (`idequipamento`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -372,13 +372,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`administrador_descarta_equipamento` (
   CONSTRAINT `fk_administrador_has_equipamento_administrador1`
     FOREIGN KEY (`administrador_pessoa_cpf`)
     REFERENCES `mydb`.`administrador` (`pessoa_cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_administrador_has_equipamento_equipamento1`
     FOREIGN KEY (`equipamento_idequipamento`)
     REFERENCES `mydb`.`equipamento` (`idequipamento`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -398,13 +398,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`compra_has_tipoEq` (
   CONSTRAINT `fk_compra_has_tipoEq_compra1`
     FOREIGN KEY (`compra_idcompra`)
     REFERENCES `mydb`.`compra` (`idcompra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_compra_has_tipoEq_tipoEq1`
     FOREIGN KEY (`tipoEq_idtipoEq`)
     REFERENCES `mydb`.`tipoEq` (`idtipoEq`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -433,13 +433,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`telefone_has_pessoa` (
   CONSTRAINT `fk_telefone_has_pessoa_telefone1`
     FOREIGN KEY (`telefone_numero`)
     REFERENCES `mydb`.`telefone` (`numero`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_telefone_has_pessoa_pessoa1`
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 create view alugel as select equipamento.idequipamento as equi,atividade.inicio as pego,atividade.termino as devolucao from equipamento left join atividade_has_equipamento on atividade_has_equipamento.equipamento_idequipamento=equipamento.idequipamento left join atividade on atividade.idatividade=atividade_has_equipamento.atividade_idatividade;
 
