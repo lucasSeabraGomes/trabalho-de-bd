@@ -1,0 +1,1 @@
+create view alugel as select equipamento.idequipamento as equi,atividade.inicio as pego,atividade.termino as devolucao from equipamento left join atividade_has_equipamento on atividade_has_equipamento.equipamento_idequipamento=equipamento.idequipamento left join atividade on atividade.idatividade=atividade_has_equipamento.atividade_idatividade;
