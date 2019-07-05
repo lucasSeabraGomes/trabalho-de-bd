@@ -115,7 +115,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`doencaCronica` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`doencaCronica` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id`))
@@ -152,7 +152,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`Evento` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Evento` (
-  `idEvento` INT NOT NULL,
+  `idEvento` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NOT NULL,
   `administrador_pessoa_cpf` VARCHAR(45) NOT NULL,
@@ -174,7 +174,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`tipoAtividade` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`tipoAtividade` (
-  `idtipoAtividade` INT NOT NULL,
+  `idtipoAtividade` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NULL,
   PRIMARY KEY (`idtipoAtividade`))
@@ -187,7 +187,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`local` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`local` (
-  `idlocal` INT NOT NULL,
+  `idlocal` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `localizacao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idlocal`))
@@ -200,7 +200,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`atividade` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`atividade` (
-  `idatividade` INT NOT NULL,
+  `idatividade` INT NOT NULL AUTO_INCREMENT,
   `tipoAtividade_idtipoAtividade` INT NOT NULL,
   `Evento_idEvento` INT NULL,
   `inicio` VARCHAR(100) NOT NULL,
@@ -282,7 +282,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`tipoEq` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`tipoEq` (
-  `idtipoEq` INT NOT NULL,
+  `idtipoEq` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`idtipoEq`))
@@ -295,7 +295,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`compra` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`compra` (
-  `idcompra` INT NOT NULL,
+  `idcompra` INT NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
   `administrador_pessoa_cpf` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idcompra`),
