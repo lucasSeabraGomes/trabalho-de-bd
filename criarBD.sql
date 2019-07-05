@@ -47,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pessoa` (
     FOREIGN KEY (`endereco_idendereco`)
     REFERENCES `mydb`.`endereco` (`enderecoCompleto`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -66,7 +67,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`instrutor` (
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -105,7 +107,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`administrador` (
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -142,7 +145,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`escoteiro_has_doencaCronica` (
     FOREIGN KEY (`doencaCronica_id`)
     REFERENCES `mydb`.`doencaCronica` (`id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -164,7 +168,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Evento` (
     FOREIGN KEY (`administrador_pessoa_cpf`)
     REFERENCES `mydb`.`administrador` (`pessoa_cpf`)
     ON DELETE  CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -224,7 +229,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`atividade` (
     FOREIGN KEY (`local_idlocal`)
     REFERENCES `mydb`.`local` (`idlocal`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -248,7 +254,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`instrutor_administra_atividade` (
     FOREIGN KEY (`atividade_idatividade`)
     REFERENCES `mydb`.`atividade` (`idatividade`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -272,7 +279,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`escoteiro_participa_atividade` (
     FOREIGN KEY (`atividade_idatividade`)
     REFERENCES `mydb`.`atividade` (`idatividade`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -304,7 +312,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`compra` (
     FOREIGN KEY (`administrador_pessoa_cpf`)
     REFERENCES `mydb`.`administrador` (`pessoa_cpf`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -329,7 +338,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`equipamento` (
     FOREIGN KEY (`compra_idcompra`)
     REFERENCES `mydb`.`compra` (`idcompra`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -353,7 +363,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`atividade_has_equipamento` (
     FOREIGN KEY (`equipamento_idequipamento`)
     REFERENCES `mydb`.`equipamento` (`idequipamento`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -378,7 +389,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`administrador_descarta_equipamento` (
     FOREIGN KEY (`equipamento_idequipamento`)
     REFERENCES `mydb`.`equipamento` (`idequipamento`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -404,7 +416,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`compra_has_tipoEq` (
     FOREIGN KEY (`tipoEq_idtipoEq`)
     REFERENCES `mydb`.`tipoEq` (`idtipoEq`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 
 
@@ -439,7 +452,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`telefone_has_pessoa` (
     FOREIGN KEY (`pessoa_cpf`)
     REFERENCES `mydb`.`pessoa` (`cpf`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE
+    )
 ENGINE = InnoDB;
 create view alugel as select equipamento.idequipamento as equi,atividade.inicio as pego,atividade.termino as devolucao from equipamento left join atividade_has_equipamento on atividade_has_equipamento.equipamento_idequipamento=equipamento.idequipamento left join atividade on atividade.idatividade=atividade_has_equipamento.atividade_idatividade;
 
