@@ -314,7 +314,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`equipamento` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`equipamento` (
-  `idequipamento` INT NOT NULL,
+  `idequipamento` INT NOT NULL AUTO_INCREMENT,
   `tipoEq_idtipoEq` INT NOT NULL,
   `compra_idcompra` INT NOT NULL,
   PRIMARY KEY (`idequipamento`),
